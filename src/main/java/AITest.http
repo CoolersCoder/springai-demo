@@ -1,0 +1,16 @@
+Chat
+### blocking GET request to chat endpoint
+GET http://localhost:8080/blocking/chat?msg="Hello, world!"
+### streaming GET request to chat endpoint
+GET http://localhost:8080/stream/chat?msg="Hello, world!"
+
+
+Image
+###
+GET http://localhost:8080/blocking/image"
+###
+GET http://localhost:8080/blocking/image?msg="skipcart icon with succssful checkout"
+
+RAG
+###
+
