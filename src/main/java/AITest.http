@@ -1,20 +1,22 @@
-Chat
+1. Chat
+### 1.1 blocking GET request to chat endpoint
+GET http://localhost:8081/blocking/chat?msg="Hello, world!"
+### 1.2 streaming GET request to chat endpoint
+GET http://localhost:8081/stream/chat?msg="Hello, world!"
+### 1.3.1 blocking GET request to chat endpoint with a memory chat
+GET http://localhost:8081/blocking/memory/chat?msg="my name is Rui"
+### 1.3.2 streaming GET request to chat endpoint with a memory chat
+GET http://localhost:8081/blocking/memory/chat?msg="what is my name?"
 
-### blocking GET request to chat endpoint
-GET http://localhost:8080/blocking/chat?msg="Hello, world!"
-
-### streaming GET request to chat endpoint
-GET http://localhost:8080/stream/chat?msg="Hello, world!"
-
-### blocking GET request to chat endpoint with a memory chat
-parame
-GET http://localhost:8080/blocking/memory/chat?msg="my name is Rui"
-###
-GET http://localhost:8080/blocking/memory/chat?msg="what is my name?"
-
-Image
-###
-GET http://localhost:8080/blocking/image/chat"
+2. Image
+### 2.1 Generate Image
+GET http://localhost:8081/blocking/image
+### 2.2 Understand Image
+POST http://localhost:8081/blocking/image/verification
+Content-Type: application/json
+{
+  "url": "https://cdn.prod.website-files.com/60414b21f1ffcdbb0d5ad688/60fef0f6b3b5c78542284648_Stocksy_txp68bf02bdW49300_Small_3824185.jpg"
+}
 ###
 
 

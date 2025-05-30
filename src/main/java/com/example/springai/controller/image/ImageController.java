@@ -15,6 +15,7 @@ import java.net.URI;
 public class ImageController {
 
     ImageModel imageModel;
+
     public ImageController(ImageModel imageModel) {
         this.imageModel = imageModel;
     }
