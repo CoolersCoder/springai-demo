@@ -13,6 +13,6 @@ spring:
 logging:
   level:
     org.springframework.ai.chat.client.advisor: DEBUG
-    org.springframework.ai.chat: DEBUG
+    org.springframework.web.client: DEBUG
 server:
   port: 8081
