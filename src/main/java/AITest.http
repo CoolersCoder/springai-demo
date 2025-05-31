@@ -13,6 +13,7 @@ GET http://localhost:8081/blocking/memory/chat?msg="what is my name?"
 GET http://localhost:8081/blocking/image
 ### 2.2 Understand Image
 POST http://localhost:8081/blocking/image/verification
+
 Content-Type: application/json
 {
   "url": "https://cdn.prod.website-files.com/60414b21f1ffcdbb0d5ad688/60fef0f6b3b5c78542284648_Stocksy_txp68bf02bdW49300_Small_3824185.jpg"
