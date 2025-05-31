@@ -1,6 +1,7 @@
 package com.example.springai.controller.image;
 
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.AllArgsConstructor;
 import org.springframework.ai.image.ImageModel;
 import org.springframework.ai.image.ImagePrompt;
 import org.springframework.ai.image.ImageResponse;
@@ -10,15 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
-
+@AllArgsConstructor
 @RestController
 public class ImageController {
 
     ImageModel imageModel;
-
-    public ImageController(ImageModel imageModel) {
-        this.imageModel = imageModel;
-    }
 
     @GetMapping("/blocking/image")
     public void ImageController(@RequestParam(value="msg", defaultValue = "A light cream colored mini golden doodle") String message, HttpServletResponse rsesponse) {

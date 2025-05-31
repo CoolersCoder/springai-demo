@@ -3,6 +3,7 @@ package com.example.springai.controller.multimodality;
 import com.example.springai.model.ImageDetails;
 import com.example.springai.model.ImageVerificationDTO;
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.MimeTypeUtils;
@@ -12,15 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.net.MalformedURLException;
 import java.net.URI;
-
+@AllArgsConstructor
 @RestController
 public class MultimodalityController {
 
     private final ChatClient chatClient;
 
-    public MultimodalityController(ChatClient chatClient) {
-        this.chatClient = chatClient;
-    }
     /**
      * This endpoint allows you to verify if a delivery photo is correct.
      * It uses a blocking call to the chat client to process the image.

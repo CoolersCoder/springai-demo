@@ -7,8 +7,12 @@ spring:
       chat:
         options:
           model: gpt-4.1-nano #the cheapest model on openai
+      embedding:
+        options:
+          model: text-embedding-3-small #the cheapest embedding model on openai
 logging:
   level:
     org.springframework.ai.chat.client.advisor: DEBUG
+    org.springframework.ai.chat: DEBUG
 server:
   port: 8081
