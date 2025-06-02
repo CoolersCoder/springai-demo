@@ -10,6 +10,16 @@ spring:
       embedding:
         options:
           model: text-embedding-3-small #the cheapest embedding model on openai
+    vectorstore:
+      mongodb:
+        collection-name: vector_store
+        initialize-schema: true
+        index-name: vector_index
+        path-name: embedding
+  data:
+    mongodb:
+      uri: ${MONGODB_CONNECTION_URL}
+      database: drive_batch_jobs
 logging:
   level:
     org.springframework.ai.chat.client.advisor: DEBUG

@@ -33,9 +33,10 @@ public class MultimodalityController {
                 .system(system -> {
                     system.text("You are package delivery system operator and check delivery photo if it is delivery to right place");
                 })
-                .user(usermessage -> {
+                .user(userMessage -> {
                     try {
-                        usermessage.text("return true or false for isDelivery and short description of the image")
+                        userMessage.text("return true or false for isDelivery, driverId from {driverId} and short description of the image")
+                                .param("driverId", request.getDriverId())
                                 .media(MimeTypeUtils.IMAGE_JPEG, URI.create(request.getUrl()).toURL());
                     } catch (MalformedURLException e) {
                         throw new RuntimeException(e);

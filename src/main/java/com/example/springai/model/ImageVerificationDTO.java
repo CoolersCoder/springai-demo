@@ -13,4 +13,6 @@ public class ImageVerificationDTO {
     @NotBlank
     @Pattern(regexp = "^https?://[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,}/?.*$", message = "Invalid URL format")
     private String url;
+
+    private String driverId;
 }

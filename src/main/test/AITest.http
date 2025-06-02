@@ -16,14 +16,17 @@ POST{{host}}/blocking/image/verification
 Content-Type: application/json
 
 {
-  "url": "https://cdn.prod.website-files.com/60414b21f1ffcdbb0d5ad688/60fef0f6b3b5c78542284648_Stocksy_txp68bf02bdW49300_Small_3824185.jpg"
+  "url": "https://cdn.prod.website-files.com/60414b21f1ffcdbb0d5ad688/60fef0f6b3b5c78542284648_Stocksy_txp68bf02bdW49300_Small_3824185.jpg",
+  "driverId": "12345"
 }
 ###
 
 3.Rag
-### 3.1 chat with RAG
-GET {{host}}/rag?msg="list skipcart team people name"
-### 3.2 chat without RAG
+### 3.1 ingest data
+POST {{host}}/rag/ingest
+### 3.2 chat with RAG
+GET {{host}}/rag/search?msg="list skipcart team people name"
+### 3.3 chat without RAG
 GET {{host}}/blocking/chat?msg="list skipcart team people name?"
 
 
