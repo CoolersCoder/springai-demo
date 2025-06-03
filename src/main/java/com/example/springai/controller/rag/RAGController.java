@@ -33,8 +33,6 @@ public class RAGController {
      */
     @GetMapping("/rag/search")
     public ResponseEntity<String> arg(@RequestParam("msg") String msg ) {
-        vectorStore.accept(getDocuments());
-
         var response = chatClient.prompt()
                 .advisors(List.of(new QuestionAnswerAdvisor(vectorStore),
                                       MessageChatMemoryAdvisor.builder(chatMemory).build()))
